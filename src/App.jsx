@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import ControlForm from "./ControlForm";
 import Course from "./pages/course";
 import ErrorPage from "./pages/404";
 import Home from "./pages/home";
@@ -20,6 +19,7 @@ import CoinHistory from "./pages/profile/history";
 import MyCoin from "./pages/profile/coin";
 import MyPayment from "./pages/profile/payment";
 import MainLayout from "./layouts/MainLayout";
+import { Contact, ContactComponent, ControlForm } from "./pages/input-form";
 
 export default function App() {
   return (
@@ -28,6 +28,8 @@ export default function App() {
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="/register" element={<ControlForm />} />
+          <Route path="/contact/*" element={<InputFormLayout />} />
+
           <Route path="/course" element={<Course />} />
           <Route path="/team" element={<Team />} />
           <Route path="/project" element={<Project />} />
@@ -53,3 +55,12 @@ export default function App() {
     </div>
   );
 }
+
+export const InputFormLayout = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Contact />} />
+      <Route path="component" element={<ContactComponent />} />
+    </Routes>
+  );
+};
