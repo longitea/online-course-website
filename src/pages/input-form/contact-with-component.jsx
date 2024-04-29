@@ -8,9 +8,7 @@ import Field from "../../components/Field";
 // Đây là kiểu set form bằng object chứa value sử dụng useState
 export default function ContactComponent() {
   const [form, setForm] = useState({});
-  const [error, setError] = useState({
-    name: "xin vui lòng nhập tên",
-  });
+  const [error, setError] = useState({});
   const handleSetForm = (key, value) => {
     setForm({ ...form, [key]: value });
   };
@@ -20,14 +18,17 @@ export default function ContactComponent() {
     return {
       error: error[name],
       value: form[name] || "",
-      onChange: (e) => handleSetForm("email", e.target.value),
+      onChange: (e) => handleSetForm(name, e.target.value),
     };
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const errorObject = {};
-    console.log("form", form);
+    const phoneRegex = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const urlRegex =
+      /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
 
     {
       /* --=============== VALIDATE FORM  =============== */
@@ -38,12 +39,18 @@ export default function ContactComponent() {
     }
     if (!form.phone?.trim()) {
       errorObject.phone = "Vui lòng điền SDT";
+    } else if (!phoneRegex.test(form.phone)) {
+      errorObject.phone = "Số điện thoại không hợp lệ";
     }
+
     if (!form.email?.trim()) {
       errorObject.email = "Vui lòng điền email";
+    } else if (!emailRegex.test(form.email)) {
+      errorObject.email = "Email không hợp lệ";
     }
-    if (!form.website?.trim()) {
-      errorObject.website = "Vui lòng điền url website";
+
+    if (form.website?.trim() && !urlRegex.test(form.website)) {
+      errorObject.website = "Vui lòng điền đúng định dạng website";
     }
     if (!form.title?.trim()) {
       errorObject.title = "Vui lòng điền tiêu đề liên hệ";
@@ -54,11 +61,12 @@ export default function ContactComponent() {
 
     setError(errorObject);
 
-    if (Object.keys(error).length === 0) {
+    if (!Object.keys(error).length === 0) {
       console.log("success");
+      console.log("form", form);
     } else {
-      console.log("error");
       console.log("error", error);
+      console.log("form", form);
     }
   };
 
@@ -173,7 +181,6 @@ export default function ContactComponent() {
               />
               <Field
                 label="Website"
-                required
                 placeholder="Đường dẫn website http://"
                 value={form.website || ""}
                 error={error.website}
