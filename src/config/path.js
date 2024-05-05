@@ -1,12 +1,11 @@
 const PROFILE_PATH = "/profile";
-const CONTACT_PATH = "/contact/*"; // không nên sử dụng kiểu này code tiện nhưng sau này link sẽ rất khó quản lý
+const CONTACT_PATH = "/contact"; // không nên sử dụng kiểu này code tiện nhưng sau này link sẽ rất khó quản lý
 export const PATH = {
   home: "/",
   register: "/register",
   contact: {
-    layout: CONTACT_PATH,
-    index: "/",
-    controlForm: "/component",
+    index: CONTACT_PATH,
+    controlForm: CONTACT_PATH + "/component",
   },
   course: "/course",
   team: "/team",
