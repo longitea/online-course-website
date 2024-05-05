@@ -148,7 +148,7 @@ export default function ContactComponent() {
         <div className="register-course">
           <section className="section-1 wrap container">
             {/* <div class="main-sub-title">liên hệ</div> */}
-            <h2 className="main-title">HỢP TÁC CÙNG Spacedev</h2>
+            <h2 className="main-title">Thanh Long Form</h2>
             <p className="top-des">
               Đừng ngần ngại liên hệ với <strong>Spacedev</strong> để cùng nhau
               tạo ra những sản phẩm giá trị, cũng như việc hợp tác với các đối

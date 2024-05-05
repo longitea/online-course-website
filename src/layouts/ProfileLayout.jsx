@@ -21,14 +21,14 @@ export default function ProfileLayout() {
           <div className="container">
             <div className="tab">
               <div className="tab-title">
-                <NavLink end to={PATH.profile.index} className="active">
+                <NavLink end to={PATH.profile.index}>
                   Thông tin tài khoản
                 </NavLink>
                 <NavLink to={PATH.profile.course}>Khóa học của bạn</NavLink>
                 <NavLink to={PATH.profile.project}>Dự án đã làm</NavLink>
                 <NavLink to={PATH.profile.history}>Lịch sử thanh toán</NavLink>
                 <NavLink to={PATH.profile.coin}>Quản lý COIN của tôi</NavLink>
-                <NavLink to={PATH.profile.course}>Khóa học đã xem</NavLink>
+                {/* <NavLink to={PATH.profile.course}>Khóa học đã xem</NavLink> */}
               </div>
               <div className="tab-content">
                 <Outlet />

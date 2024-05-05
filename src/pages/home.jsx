@@ -1,6 +1,8 @@
 import React from "react";
+import { useScrollTop } from "../hooks/useScrollTop";
 
 export default function Home() {
+  useScrollTop();
   return (
     <main id="main">
       <div className="homepage">
@@ -9,9 +11,15 @@ export default function Home() {
             <div className="container">
               <div className="content">
                 <h2 className="title">
-                  Điều quan trọng không phải là <span style={{ color: "rgb(229, 57, 53)" }}>vị trí đứng</span> mà là <span style={{ color: "rgb(63, 81, 181)" }}>hướng đi</span>
+                  Điều quan trọng không phải là{" "}
+                  <span style={{ color: "rgb(229, 57, 53)" }}>vị trí đứng</span>{" "}
+                  mà là{" "}
+                  <span style={{ color: "rgb(63, 81, 181)" }}>hướng đi</span>
                 </h2>
-                <a href="https://spacedev.vn/roadmap" className="btn main round">
+                <a
+                  href="https://spacedev.vn/roadmap"
+                  className="btn main round"
+                >
                   Roadmap
                 </a>
               </div>
@@ -52,7 +60,12 @@ export default function Home() {
         <section className="section-1">
           <div className="container">
             <h2 className="main-title">KHÓA HỌC SPACEDEV</h2>
-            <p className="top-des">Cho dù bạn muốn tìm kiếm công việc, khởi nghiệp, phát triển hoạt động kinh doanh hay chỉ đơn giản là muốn khám phá thế giới, hãy chọn lộ trình học tập mà bạn muốn và bắt đầu câu chuyện thành công của bạn.</p>
+            <p className="top-des">
+              Cho dù bạn muốn tìm kiếm công việc, khởi nghiệp, phát triển hoạt
+              động kinh doanh hay chỉ đơn giản là muốn khám phá thế giới, hãy
+              chọn lộ trình học tập mà bạn muốn và bắt đầu câu chuyện thành công
+              của bạn.
+            </p>
             <div className="textbox" style={{ marginTop: "100px" }}>
               <h3 className="sub-title">KHÓA HỌC</h3>
               <h2 className="main-title">OFFLINE</h2>
@@ -67,7 +80,9 @@ export default function Home() {
                     <a className="name" href="./course-detail.html">
                       Reactjs Advanced
                     </a>
-                    <p className="des">One of the best corporate fashion brands in Sydney</p>
+                    <p className="des">
+                      One of the best corporate fashion brands in Sydney
+                    </p>
                   </div>
                   <div className="bottom">
                     <div className="teacher">
@@ -91,7 +106,9 @@ export default function Home() {
                     <a className="name" href="./course-detail.html">
                       React JS
                     </a>
-                    <p className="des">One of the best corporate fashion brands in Sydney</p>
+                    <p className="des">
+                      One of the best corporate fashion brands in Sydney
+                    </p>
                   </div>
                   <div className="bottom">
                     <div className="teacher">
@@ -115,7 +132,9 @@ export default function Home() {
                     <a className="name" href="./course-detail.html">
                       Devops
                     </a>
-                    <p className="des">One of the best corporate fashion brands in Sydney</p>
+                    <p className="des">
+                      One of the best corporate fashion brands in Sydney
+                    </p>
                   </div>
                   <div className="bottom">
                     <div className="teacher">
@@ -139,7 +158,9 @@ export default function Home() {
                     <a className="name" href="./course-detail.html">
                       Lập trình Nodejs
                     </a>
-                    <p className="des">One of the best corporate fashion brands in Sydney</p>
+                    <p className="des">
+                      One of the best corporate fashion brands in Sydney
+                    </p>
                   </div>
                   <div className="bottom">
                     <div className="teacher">
@@ -163,7 +184,9 @@ export default function Home() {
                     <a href="./course-detail.html" className="name">
                       HTML, CSS, JS Cơ bản
                     </a>
-                    <p className="des">One of the best corporate fashion brands in Sydney</p>
+                    <p className="des">
+                      One of the best corporate fashion brands in Sydney
+                    </p>
                   </div>
                   <div className="bottom">
                     <div className="teacher">
@@ -187,7 +210,9 @@ export default function Home() {
                     <a className="name" href="./course-detail.html">
                       Web Responsive
                     </a>
-                    <p className="des">One of the best corporate fashion brands in Sydney</p>
+                    <p className="des">
+                      One of the best corporate fashion brands in Sydney
+                    </p>
                   </div>
                   <div className="bottom">
                     <div className="teacher">
@@ -218,28 +243,51 @@ export default function Home() {
                   <span>Giá trị Cốt lỗi</span> <br /> tại Spacedev
                 </h2>
                 <div className="videodif" data-src="video/cfd-video-intro.mp4">
-                  <img src="https://svtech.com.vn/wp-content/uploads/2020/07/dexus-office-space.jpg" alt="" />
+                  <img
+                    src="https://svtech.com.vn/wp-content/uploads/2020/07/dexus-office-space.jpg"
+                    alt=""
+                  />
                   <div className="play-btn btn-video-intro">
                     <img src="img/play-icon.svg" alt="" />
                   </div>
                 </div>
                 <div className="item" style={{ marginTop: "35px" }}>
                   <h4>Sáng tạo và đơn giản</h4>
-                  <p>Spacedev đề cao những sáng tạo đơn giản thay đổi thế giới, gia tăng năng suất và cải thiện cuộc sống.</p>
+                  <p>
+                    Spacedev đề cao những sáng tạo đơn giản thay đổi thế giới,
+                    gia tăng năng suất và cải thiện cuộc sống.
+                  </p>
                 </div>
               </div>
               <div className="contentbox col-md-6 col-sm-12 col-xs-12">
                 <div className="item">
                   <h4>Tập trung vào khách hàng</h4>
-                  <p>Spacedev được tạo ra với mục tiêu cao nhất giúp cho việc học trở nên dễ dàng hơn và kiến thức thật sự ý nghĩa. Những học viên là đối tượng phục vụ của spacedev vì thế những yêu cầu chính đáng của học viên sẽ được nền tảng tiếp thu và cải thiện.</p>
+                  <p>
+                    Spacedev được tạo ra với mục tiêu cao nhất giúp cho việc học
+                    trở nên dễ dàng hơn và kiến thức thật sự ý nghĩa. Những học
+                    viên là đối tượng phục vụ của spacedev vì thế những yêu cầu
+                    chính đáng của học viên sẽ được nền tảng tiếp thu và cải
+                    thiện.
+                  </p>
                 </div>
                 <div className="item">
                   <h4>Gây dựng lòng tin</h4>
-                  <p>Spacedev luôn trung thực với những gì mình phát ngôn cũng như công bố trên các nền tảng mạng xã hội. Trung thực và giữ chữ tín với học viên, với đối tác và với những người sáng lập luôn là tiêu chí hàng đầu giúp nền tảng phát triển bền vững ở hiện tại và trong tương lai.</p>
+                  <p>
+                    Spacedev luôn trung thực với những gì mình phát ngôn cũng
+                    như công bố trên các nền tảng mạng xã hội. Trung thực và giữ
+                    chữ tín với học viên, với đối tác và với những người sáng
+                    lập luôn là tiêu chí hàng đầu giúp nền tảng phát triển bền
+                    vững ở hiện tại và trong tương lai.
+                  </p>
                 </div>
                 <div className="item">
                   <h4>Phát triển nhưng không dừng lại</h4>
-                  <p>Bằng việc áp dụng những công nghệ trên nền tảng và sự hoàn thiện về chức năng là mình chứng rõ nhất cho sự chuyên nghiệp cũng như sự tận tâm của những người sáng lập nền tảng spacedev.vn.</p>
+                  <p>
+                    Bằng việc áp dụng những công nghệ trên nền tảng và sự hoàn
+                    thiện về chức năng là mình chứng rõ nhất cho sự chuyên
+                    nghiệp cũng như sự tận tâm của những người sáng lập nền tảng
+                    spacedev.vn.
+                  </p>
                 </div>
               </div>
             </div>
@@ -280,7 +328,11 @@ export default function Home() {
                           <img src="img/quotes.svg" alt="" />
                         </div>
                       </div>
-                      <div className="content">Khóa học quá tuyệt vời, đầy đủ kiến thức lại còn được bonus thêm những kỹ năng tìm lỗi và phỏng vấn khi đi làm nữa</div>
+                      <div className="content">
+                        Khóa học quá tuyệt vời, đầy đủ kiến thức lại còn được
+                        bonus thêm những kỹ năng tìm lỗi và phỏng vấn khi đi làm
+                        nữa
+                      </div>
                       <div className="bottom">
                         <a href="#" target="_blank">
                           <img src="img/facebook.svg" alt="" />
@@ -298,7 +350,11 @@ export default function Home() {
                           <img src="img/quotes.svg" alt="" />
                         </div>
                       </div>
-                      <div className="content">Mentor có tâm, tận tình. Mình tìm được hướng đi trong lập trình front-end qua khóa học. Nơi chọn lựa an tâm cho mọi người.</div>
+                      <div className="content">
+                        Mentor có tâm, tận tình. Mình tìm được hướng đi trong
+                        lập trình front-end qua khóa học. Nơi chọn lựa an tâm
+                        cho mọi người.
+                      </div>
                       <div className="bottom">
                         <a href="#" target="_blank">
                           <img src="img/facebook.svg" alt="" />
@@ -316,7 +372,13 @@ export default function Home() {
                           <img src="img/quotes.svg" alt="" />
                         </div>
                       </div>
-                      <div className="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin libero id magna finibus, in maximus urna tincidunt. Nam at leo lacinia, interdum dolor in, molestie lectus. Aenean porttitor purus at purus euismod tristique</div>
+                      <div className="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed sollicitudin libero id magna finibus, in maximus
+                        urna tincidunt. Nam at leo lacinia, interdum dolor in,
+                        molestie lectus. Aenean porttitor purus at purus euismod
+                        tristique
+                      </div>
                       <div className="bottom">
                         <a href="#" target="_blank">
                           <img src="img/facebook.svg" alt="" />
@@ -330,24 +392,42 @@ export default function Home() {
                       <div className="carousel-cell">
                         <div className="img">
                           <picture>
-                            <source media="(max-width: 767px)" srcSet="img/img_team14.jpg" />
-                            <img data-flickity-lazyload="img/img_team14.jpg" alt="" />
+                            <source
+                              media="(max-width: 767px)"
+                              srcSet="img/img_team14.jpg"
+                            />
+                            <img
+                              data-flickity-lazyload="img/img_team14.jpg"
+                              alt=""
+                            />
                           </picture>
                         </div>
                       </div>
                       <div className="carousel-cell">
                         <div className="img">
                           <picture>
-                            <source media="(max-width: 767px)" srcSet="img/img_team15.jpg" />
-                            <img data-flickity-lazyload="img/img_team15.jpg" alt="" />
+                            <source
+                              media="(max-width: 767px)"
+                              srcSet="img/img_team15.jpg"
+                            />
+                            <img
+                              data-flickity-lazyload="img/img_team15.jpg"
+                              alt=""
+                            />
                           </picture>
                         </div>
                       </div>
                       <div className="carousel-cell">
                         <div className="img">
                           <picture>
-                            <source media="(max-width: 767px)" srcSet="img/img_team17.jpg" />
-                            <img data-flickity-lazyload="img/img_team17.jpg" alt="" />
+                            <source
+                              media="(max-width: 767px)"
+                              srcSet="img/img_team17.jpg"
+                            />
+                            <img
+                              data-flickity-lazyload="img/img_team17.jpg"
+                              alt=""
+                            />
                           </picture>
                         </div>
                       </div>

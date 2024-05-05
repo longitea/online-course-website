@@ -7,13 +7,15 @@ export default function MyProject() {
         <div className="col-md-6 course">
           <div className="wrap">
             <a href="#" className="cover">
-              <img src="./img/img8.png" alt="" />
+              <img src="/img/img8.png" alt="" />
             </a>
             <div className="info">
               <a href="#" className="name">
                 Reactjs
               </a>
-              <p className="des">Dự án hoàn thành trong khóa Spacedev1 Offline của Spacedev Team.</p>
+              <p className="des">
+                Dự án hoàn thành trong khóa Spacedev1 Offline của Spacedev Team.
+              </p>
             </div>
             <div className="bottom">
               <div className="teacher">
@@ -29,13 +31,15 @@ export default function MyProject() {
         <div className="col-md-6 course">
           <div className="wrap">
             <a href="#" className="cover">
-              <img src="./img/img8.png" alt="" />
+              <img src="/img/img8.png" alt="" />
             </a>
             <div className="info">
               <a href="#" className="name">
                 Shopper
               </a>
-              <p className="des">Dự án hoàn thành trong khóa Spacedev1 Offline của Spacedev Team.</p>
+              <p className="des">
+                Dự án hoàn thành trong khóa Spacedev1 Offline của Spacedev Team.
+              </p>
             </div>
             <div className="bottom">
               <div className="teacher">
@@ -51,7 +55,12 @@ export default function MyProject() {
       </div>
       <div className="btn-wrap">
         <div className="btn overlay btn-icon round">
-          <img src="img/icon-upload.svg" alt="" style={{ marginRight: "10px" }} /> Tải lên
+          <img
+            src="img/icon-upload.svg"
+            alt=""
+            style={{ marginRight: "10px" }}
+          />{" "}
+          Tải lên
         </div>
       </div>
     </div>

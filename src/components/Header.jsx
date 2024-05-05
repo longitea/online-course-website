@@ -22,10 +22,10 @@ export default function Header() {
             </div>
             <span className="text">menu</span>
           </div>
-          <NavLink onClick={onCloseMenu} to={PATH.home} className="logo">
+          <Link onClick={onCloseMenu} to={PATH.home} className="logo">
             <img src="/img/logo.svg" alt="" />
             <h1>Spacedev</h1>
-          </NavLink>
+          </Link>
           <div className="right">
             <div className="have-login">
               <div className="account">
@@ -54,14 +54,14 @@ export default function Header() {
       <nav className="nav">
         <ul>
           <li>
-            <NavLink onClick={onCloseMenu} to={PATH.signin}>
+            <a onClick={onCloseMenu} to={PATH.signin}>
               Đăng ký / Đăng nhập
-            </NavLink>
+            </a>
           </li>
           <li>
             <NavLink
               onClick={onCloseMenu}
-              to={PATH.profile}
+              to={PATH.profile.index}
               className="account"
             >
               <div className="avatar">
@@ -86,7 +86,7 @@ export default function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={onCloseMenu} to={PATH.profile}>
+            <NavLink onClick={onCloseMenu} to={PATH.project}>
               Dự Án
             </NavLink>
           </li>
