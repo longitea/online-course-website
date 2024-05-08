@@ -1,8 +1,10 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { PATH } from "../config/path";
+import { useAuth } from "../contexts/authContext";
 
 export default function Header() {
+  const { user, logout } = useAuth();
   const onOpenMenu = () => {
     document.body.classList.toggle("menu-is-show");
   };
@@ -30,7 +32,7 @@ export default function Header() {
             <div className="have-login">
               <div className="account">
                 <Link to={PATH.profile.index} className="info">
-                  <div className="name">Đặng Thuyền Vương</div>
+                  <div className="name">{user.name || "Chưa Đăng Nhập"}</div>
                   <div className="avatar">
                     <img src="/img/avt.png" alt="" />
                   </div>
@@ -40,7 +42,15 @@ export default function Header() {
               <div className="sub">
                 <Link to={PATH.profile.course}>Khóa học của tôi</Link>
                 <Link to={PATH.profile.index}>Thông tin tài khoản</Link>
-                <a to="#">Đăng xuất</a>
+                <Link
+                  to="#"
+                  onClick={(ev) => {
+                    ev.preventDefault();
+                    logout();
+                  }}
+                >
+                  Đăng xuất
+                </Link>
               </div>
             </div>
             {/* <div class="not-login bg-none">
