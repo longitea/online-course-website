@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { PATH } from "../config/path";
+import { useAuth } from "../contexts/authContext";
 
 export default function SignIn() {
+  const [form, setForm] = useState({});
+  const handleInputForm = (key, value) => {
+    setForm((prev) => ({
+      ...prev,
+      [key]: value,
+    }));
+  };
+  const { login } = useAuth();
+  const navigate = useNavigate();
+  const _onLogin = () => {
+    login(form);
+    navigate(PATH.profile.index);
+  };
   return (
     <main id="main">
       <div className="auth">
@@ -8,8 +24,16 @@ export default function SignIn() {
           {/* login-form */}
           <div className="ct_login">
             <h2 className="title">Đăng nhập</h2>
-            <input type="text" placeholder="Email / Số điện thoại" />
-            <input type="password" placeholder="Mật khẩu" />
+            <input
+              onChange={(e) => handleInputForm("email", e.target.value)}
+              type="text"
+              placeholder="Email / Số điện thoại"
+            />
+            <input
+              onChange={(e) => handleInputForm("password", e.target.value)}
+              type="password"
+              placeholder="Mật khẩu"
+            />
             <div className="remember">
               <label className="btn-remember">
                 <div>
@@ -21,7 +45,9 @@ export default function SignIn() {
                 Quên mật khẩu?
               </a>
             </div>
-            <button className="btn rect main btn-login">đăng nhập</button>
+            <button onClick={_onLogin} className="btn rect main btn-login">
+              đăng nhập
+            </button>
             <div className="text-register">
               <span>Nếu bạn chưa có tài khoản?</span>{" "}
               <a className="link" href="./signup.html">

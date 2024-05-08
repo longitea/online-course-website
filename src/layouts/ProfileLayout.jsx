@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { PATH } from "../config/path";
+import { useAuth } from "../contexts/authContext/index.jsx";
 
 export default function ProfileLayout() {
+  const { user } = useAuth();
   return (
     <main id="main">
       <div className="profile">
@@ -10,10 +12,10 @@ export default function ProfileLayout() {
           <div className="top-info">
             <div className="avatar">
               {/* <span class="text">H</span> */}
-              <img src="/img/avt.png" alt="" />
+              <img src={user.avatar || "/img/avt.png"} alt="" />
               <div className="camera" />
             </div>
-            <div className="name">Vương Đặng</div>
+            <div className="name">{user.name}</div>
             <p className="des">
               Thành viên của spacedev từ ngày 20 tháng 10 năm 2022
             </p>
